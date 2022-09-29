@@ -88,3 +88,8 @@ fun Greeting(s: String): String {
 fun Greeting(a: String, b: String): String {
     return a
 }
+
+@Composable
+fun Greeting(a: String, c: String, b: String): String {
+    return a
+}
