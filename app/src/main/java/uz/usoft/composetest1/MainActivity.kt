@@ -1,6 +1,7 @@
 package uz.usoft.composetest1
 
 import android.os.Bundle
+import android.view.Gravity
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -14,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import uz.usoft.composetest1.ui.theme.ComposeTest1Theme
 
@@ -68,11 +70,21 @@ fun MessageCard(msg: Message) {
 }
 
 
-//@Preview
-//@Composable
-//fun DefaultPreview() {
-//    ComposeTest1Theme {
-//        Gravity.CENTER
-//        Greeting("Android")
-//    }
-//}
+@Preview
+@Composable
+fun DefaultPreview() {
+    ComposeTest1Theme {
+        Gravity.CENTER
+        Greeting("Android")
+    }
+}
+
+@Composable
+fun Greeting(s: String): String {
+    return s
+}
+
+@Composable
+fun Greeting(a: String, b: String): String {
+    return a
+}
